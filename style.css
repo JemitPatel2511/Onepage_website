@@ -205,8 +205,12 @@ color:#12034E;
 .whyChoosebox p{
   text-align: -webkit-center;
 }
+
+/* --------------------------------testimonials------------------------ */
 #Testimonials{
-  background-color:#12034E;
+  background-color:#1D0A68;
+  height: 438px;
+   
 }
 .testimonialsBox{
   padding: 30px 21px;
@@ -219,4 +223,47 @@ color:#12034E;
 }
 .testimonialsBox p{
   margin-bottom: 0rem;
+}
+
+/* --------------------------form/--------------------------------------- */
+.formBox{
+  padding: 20px;
+}
+.formBox h4{
+  color: #3f9ba6;
+  text-align: center;
+  margin-bottom: 45px;
+  font-weight: 900;
+}
+.questionBox{
+  margin: 30px;
+}
+.collapsed{
+  border-radius: 10px !important;
+}
+.formInput{
+  margin: 0px !important;
+}
+.txtarea{
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.submit{
+  width: 70% !important;
+}
+.btn-lg{
+  width: 35%;
+}
+
+/* -------------------------last logos------------- */
+.lastlogos{
+  background-image: linear-gradient(
+    #12034E, #2F85E7);
 }
