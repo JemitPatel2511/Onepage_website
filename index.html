@@ -5,6 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-------font link ----->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -32,12 +38,12 @@
 
     <!------------------------------------------------navbar----------------------------------------------- -->
     <div>
-      <header>
+      <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"> Excellent Technology </a>
+            <img src="Images/CompanyLogo.png" alt="">
           </div>
-          <div class="container-fluid">
+          <div class="container-fluid" >
             <button
               class="navbar-toggler"
               type="button"
@@ -48,7 +54,8 @@
               aria-label="Toggle navigation"
               style="background-color: white;"
             >
-              <span class="navbar-toggler-icon"></span>
+
+              <span class="navbar-toggler-icon" style="display: block;"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
@@ -67,11 +74,12 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#Testimonials">Testimonials</a>
                 </li>
-
-                <button class="enquirebtn" style="margin-left: 70px !important">
-                  <a class="nav-link" href="#">Enquire Now</a>
-                </button>
               </ul>
+              <div>
+                <button class="enquirebtn">
+                  <a class="nav-link" href="#">EnquireNow</a>
+                </button>
+              </div>
             </div>
           </div>
         </nav>
@@ -103,8 +111,12 @@
             </div>
 
             <div class="col-md-6">
-              <div class="">
-                <img class="girlImg" src="Images/girl_image.png" alt="" />
+              <div class="sideImg">
+            
+                    <!-- <img src="backgroungImg/Ellipse 5.png" class="circle2" alt="">
+                    <img src="backgroungImg/Ellipse 3.png" class="circle1" style="position: absolute;" alt=""> -->
+              
+                <img class="girlImg" src="Images/girl_image.png"/>
               </div>
             </div>
           </div>
@@ -528,18 +540,17 @@
  </section> -->
 <!-----------section end------------>
 
+<!---------------------------Testimonials------------------------ -->
+
 <section id="Testimonials">
 <h2 style="text-align: center; margin: 50px;">Testimonials</h2>
   <div class="container testimonials">
     <div class="row" style="margin: 30px;">
       <div class="col order-first testimonialsBox">
   <div>
+    <img src="Images/Ellipse 27.png" alt="">
     <p style="color: black;"><b>Aesha Patel</b></p>
-    <img src="iconImage/star (1) 1.png" alt="">
-    <img src="iconImage/star (1) 1.png" alt="">
-    <img src="iconImage/star (1) 1.png" alt="">
-    <img src="iconImage/star (1) 1.png" alt="">
-    <img src="iconImage/star (1) 1.png" alt="">
+   
   </div>
    <div>
     <p style="color: black;">
@@ -548,15 +559,10 @@
    </div>
    </div>
       <div class="col testimonialsBox">
-        <!-- <div><img src="iconImage/Group 26.png" style="width: 100px;"></div> -->
         <div>
+          <img src="Images/Ellipse 27.png" alt="">
           <p style="color: black;"><b>Aesha Patel</b></p>
-   <img src="iconImage/star (1) 1.png" alt="">
-   <img src="iconImage/star (1) 1.png" alt="">
-   <img src="iconImage/star (1) 1.png" alt="">
-   <img src="iconImage/star (1) 1.png" alt="">
-   <img src="iconImage/star (1) 1.png" alt="">
-        </div>
+       </div>
    <div>
     <p style="color: black;">
       I started a new journey with Weltec, it’s been great luck for me that I found Weltec and learned from the best mentors. It has a very flexible timing and a super good environment, also very supportive faculties and hr team. 
@@ -565,12 +571,8 @@
       </div>
       <div class="col order-last testimonialsBox">
        <div>
+        <img src="Images/Ellipse 27.png" alt="">
         <p style="color: black;"><b>Aesha Patel</b></p>
-        <img src="iconImage/star (1) 1.png" alt="">
-        <img src="iconImage/star (1) 1.png" alt="">
-        <img src="iconImage/star (1) 1.png" alt="">
-        <img src="iconImage/star (1) 1.png" alt="">
-        <img src="iconImage/star (1) 1.png" alt="">
        </div>
    <div>
     <p style="color: black;">
@@ -584,8 +586,9 @@
 <!------------------ section end------ -->
 
  <!------------------------------------ form section ----------------------------->
-<section id="form" style="background-color: #12034E;">
-
+<section id="form" style="background-color:
+#12034E;">
+<div class="container">
   <div class="row" style="padding: 80px; margin: 40px;">
 
 
@@ -677,10 +680,10 @@
 <h4>Enquiry Form</h4>
        <form class="row g-3">
         <div class="col-md-6">
-          <input type="email" class="formInput" id="inputEmail4" placeholder="Email">
+          <input type="text" class="formInput" id="fname" placeholder="First Name">
         </div>
         <div class="col-md-6">
-          <input type="password" class="formInput" id="inputPassword4" placeholder="password">
+          <input type="text" class="formInput" id="lname" placeholder="Last Name">
         </div>
         <div class="col-md-6">
           <input type="email" class="formInput" id="inputEmail4" placeholder="Email">
@@ -689,7 +692,7 @@
           <input type="password" class="formInput" id="inputPassword4" placeholder="password">
         </div>
         <div class="col-12">
-          <input type="text" class="formInput" id="inputAddress" placeholder="1234 Main St">
+          <input type="text" class="formInput" id="inputAddress" placeholder="Category">
         </div>
         <div class="col-12">
          <textarea name="message" id="message" class="txtarea"  placeholder="Message"></textarea>
@@ -698,6 +701,8 @@
 
         
          </form>
+</div>
+</div>
 </div>
 </section><!--end --- form section -->
 
@@ -740,6 +745,77 @@
     </div>
   </div>
 </section>
+<!-- section end----------------- -->
+
+<section id="lastSection" style="background-color: #0c042c; width:100%; padding:20px;">
+   
+      <div class="row lastSection">
+        <div class="col order-first">
+       <p>Lorem ipsum dolor sit amet consectetur. Amet etiam eget pellentesque viverra sed habitasse. Amet faucibus diam aliquet posuere cursus et massa ut. Diam tortor magna quis purus suspendisse in at. Orci molestie ut pulvinar non libero at imperdiet ac.</p>
+       <p> Address : <img src="iconImage/gps 1.png" alt=""> E-1201, TCC Ahmedabad, Gujarat</p>
+       <p>Call To : <img src="iconImage/phone-call.png" alt="" srcset=""> +91 7016803641</p>
+       <p>Mail To : <img src="iconImage/email.png" alt="" srcset=""> md@excellenttechnologies.co.in</p>
+        <div class="Social_btn">
+          <button> <img src="iconImage/linkedin.png" alt=""></button>
+          <button> <img src="iconImage/facebook.png" alt=""></button>
+          <button> <img src="iconImage/instagram.png" alt=""></button>
+          <button> <img src="iconImage/twitter.png" alt=""></button>
+        </div>
+     </div>
+        <div class="col">
+          <h5>Quick Links</h5>
+         <table class="linkTable" style="width: 100%;">
+          <tr style="margin-bottom: 10px;">
+            <td><a href="#about">>> About</a></td>
+            <td><a href="#">>>  Privacy Policy</a></td>
+          </tr>
+          <tr>
+            <td><a href="#Categories">>> Categories</a></td>
+            <td><a href="#">>> Term  & Condition</a></td>
+          </tr>
+          <tr>
+            <td><a href="#Course">>> Course</a></td>
+            <td><a href="#">>>  Refund Cancellation</a></td>
+          </tr>
+          <tr>
+            <td><a href="#imageGallary">>> image Gallary</a></td>
+            <td><a href="#about">>> Course Details</a></td>
+          </tr>
+          <tr>
+            <td><a href="#Testimonials">>> Testimonials</a></td>
+            <td><a href="#about">>> Payment</a></td>
+          </tr>
+         </table>
+        </div>
+        <div class="col order-last ">
+          <div class="buttonLast">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="enter your email"
+            />
+            <button type="button" class="btnLast">Get in Touch</button>
+          </div>
+          <div class="ratio ratio-21x9" style="margin-bottom: 50px;">
+            <div><iframe style="float: right; margin-top: 10px;" src="file:///C:/Users/Hp/AppData/Local/Temp/Rar$EXa4624.16482/Arsha/index.html" frameborder="0"></iframe></div>
+          </div>
+          <div>
+            <img src="Images/pngimg 1.png" alt="">
+            <img src="Images/Visa-Card-Logo-PNG-Picture 1.png" alt="">
+            <img src="Images/png-transparent-american-express 1.png" alt="">
+          </div>
+         <div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div  style="background-color: 
+  #090223;">
+
+<p style="padding: 20px;">Copyright © 2023 Xwebinfolab , All Rights Reserved</p>
+  </div>
+     
     </div>
   </body>
 </html>

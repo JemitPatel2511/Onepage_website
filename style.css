@@ -5,8 +5,6 @@ body {
   color: white;
   height: 100%;
   width: auto;
-  /* margin: 2%; */
-  /* background-image: linear-gradient( #1d0a68, rgb(107, 65, 170)); */
   background-color: #1d0a68;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -15,6 +13,9 @@ body {
 header {
   background-color: #1d0a68;
 }
+.navbar-collapse {
+  margin-right: 100px;
+}
 .nav-link {
   font-family: "Poppins";
   color: #ffffff !important;
@@ -22,19 +23,27 @@ header {
 .navbar-toggler {
   color: white !important;
   outline: none;
+  display: block;
+  float: right;
 }
 .navbar-nav li {
-  padding-left: 0 10px;
+  margin-right: 20px;
 }
-.navbar-toggler-icon {
+
+@media (max-width: 96%) {
+  .mobile-nav-toggle {
+    display: block;
+    float: right;
+  }
+}
+
+.navbar-toggler {
   color: white !important;
 }
 .navbar-brand {
   font-family: "Poppins";
   font-style: normal;
   text-align: justify;
-  /* width: 50%; */
-  /* background-color: #3F9BA6; */
   color: #ffffff !important;
 }
 .enquirebtn {
@@ -42,9 +51,9 @@ header {
   border: 2px solid #ffffff;
   background-color: #1d0a68;
   border-radius: 10px;
-  font-family: "Poppins";
   font-style: normal;
   color: #ffffff;
+  height: 0% !important;
 }
 
 /*----------------------- banner------------------ */
@@ -54,7 +63,7 @@ header {
   color: white;
   background-image: url("Images/Ellipse\ 7.png");
   background-repeat: no-repeat;
-  background-position-x:right;
+  background-position-x: right;
 }
 .title {
   font-family: "Poppins";
@@ -71,7 +80,11 @@ header {
   font-weight: 400;
   line-height: normal;
 }
-
+/* .girlImg{
+  position: absolute;
+  top: 45%;
+  left: 65%;
+} */
 /* --------------------------mailbox------------- */
 
 .buttonIn {
@@ -175,76 +188,73 @@ input {
  display: block;
   visibility: visible;
 } */
-.caurseBox p:nth-child(3){
-color:#12034E;
+.caurseBox p:nth-child(3) {
+  color: #12034e;
 }
 
 /* ------------Why choose--------- */
-#whyChoose{
+#whyChoose {
   width: 100%;
   margin: 20px;
 }
 
-.whyChooseH1{
+.whyChooseH1 {
   text-shadow: -2px -2px #c3bcbc;
-  text-align: center; 
+  text-align: center;
   margin-bottom: 70px;
 }
-.whyChoose img{
+.whyChoose img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width:auto;
+  width: auto;
 }
-.whyChoose h5{
+.whyChoose h5 {
   text-align: center;
 }
-.whyChoosebox{
+.whyChoosebox {
   margin: 25px;
 }
-.whyChoosebox p{
+.whyChoosebox p {
   text-align: -webkit-center;
 }
 
 /* --------------------------------testimonials------------------------ */
-#Testimonials{
-  background-color:#1D0A68;
-  height: 438px;
-   
+#Testimonials {
+  background-color: #1d0a68;
 }
-.testimonialsBox{
+.testimonialsBox {
   padding: 30px 21px;
   border: 2px solid black;
-  background-color: white;
+  background-image: linear-gradient(#705BBF,#5035BC);
   width: 50%;
   margin: 25px;
   border-radius: 35px;
- 
 }
-.testimonialsBox p{
+.testimonialsBox p {
   margin-bottom: 0rem;
 }
 
 /* --------------------------form/--------------------------------------- */
-.formBox{
+.formBox {
   padding: 20px;
 }
-.formBox h4{
+.formBox h4 {
   color: #3f9ba6;
   text-align: center;
   margin-bottom: 45px;
   font-weight: 900;
 }
-.questionBox{
+.questionBox {
   margin: 30px;
 }
-.collapsed{
+.collapsed {
   border-radius: 10px !important;
 }
-.formInput{
+.formInput {
   margin: 0px !important;
 }
-.txtarea{
+.txtarea {
   width: 100%;
   height: 150px;
   padding: 12px 20px;
@@ -255,15 +265,57 @@ color:#12034E;
   font-size: 16px;
   resize: none;
 }
-.submit{
+.submit {
   width: 70% !important;
 }
-.btn-lg{
+.btn-lg {
   width: 35%;
 }
 
 /* -------------------------last logos------------- */
-.lastlogos{
-  background-image: linear-gradient(
-    #12034E, #2F85E7);
+.lastlogos {
+  background-image: linear-gradient(#12034e, #2f85e7);
+  width: 85%;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* position: absolute; */
+}
+.lastSection {
+  padding: 30px;
+  padding-top: 50px;
+}
+/* .linkTable tr{
+  padding: 10px;
+} */
+td {
+  padding: 10px;
+}
+.buttonLast {
+  position: relative;
+  width: 330px;
+  height: 73px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+.btnLast {
+  position: absolute;
+  border: 2px solid #2f85e7 !important;
+  text-align: center;
+  color: black !important;
+  border-radius: 5px;
+  right: -10px;
+  font-size: 10px !important;
+  z-index: 2;
+  border: none;
+  top: 30px;
+  height: 30px;
+  cursor: pointer;
+  transform: translateX(2px);
+}
+.Social_btn button {
+  background-color: #12034e;
+  border: 2px solid #5dd3e1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
 }
