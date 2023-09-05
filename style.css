@@ -1,3 +1,52 @@
+.Largecrl{
+  width:330px;
+  float: right;
+  height:330px;
+  border:1px solid #CCC;
+  position:absolute;
+
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:10px;
+  height:10px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 4s linear infinite;
+}
+#circle1{
+  animation: circle 5s linear infinite;
+}
+#circle2{
+  animation: circle 6s linear infinite;
+}
+#circle3{
+  animation: circle 7s linear infinite;
+}
+#circle4{
+  animation: circle 4.5s linear infinite;
+}
+
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -191,7 +240,26 @@ input {
 .caurseBox p:nth-child(3) {
   color: #12034e;
 }
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content{
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 /* ------------Why choose--------- */
 #whyChoose {
   width: 100%;
@@ -233,6 +301,7 @@ input {
 }
 .testimonialsBox p {
   margin-bottom: 0rem;
+  float: right;
 }
 
 /* --------------------------form/--------------------------------------- */
@@ -270,6 +339,46 @@ input {
 }
 .btn-lg {
   width: 35%;
+}
+/* ---faq--- */
+.faq{
+  background: white;
+    color: black;
+    border-radius: 5px;
+    margin: 26px;
+    border: 2px solid white
+}
+.question
+{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.question img{
+  margin-right:15px;
+}
+.question h3
+{
+  font-size: 14px;
+}
+
+.answer
+{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.answer p
+{
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.faq.active .answer
+{
+  max-height: 300px;
 }
 
 /* -------------------------last logos------------- */
@@ -318,4 +427,7 @@ td {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
+}
+.Social_btn{
+  padding: 30px;
 }
