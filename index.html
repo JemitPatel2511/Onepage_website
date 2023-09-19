@@ -104,7 +104,6 @@
                 <input
                   type="email"
                   name="email"
-                  id="email"
                   placeholder="enter your email"
                 />
                 <button class="button">Enquire Now</button>
@@ -126,6 +125,7 @@
           </div>
         </div>
       </section>
+    
 
       <!-- ---------------------------------------Logo section ------------------------------------------->
       <section id="logos" class="logos">
@@ -163,6 +163,15 @@
           </div>
         </div>
       </section>
+    
+  
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="24" fill="#3F9BA6" fill-opacity="0.27"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+              <circle cx="11.5" cy="11.5" r="11.5" fill="#3F9BA6" fill-opacity="0.4"/>
+              </svg>
+
       <!--------------------------------------------- About  section --------------------------------------->
       <section id="about" class="about">
         <div class="container">
@@ -402,9 +411,6 @@
               </div>
             </div>
 
-            <div id="dropdown">
-              <button class="dropbtn">Dropdown</button>
-              <div class="dropdown-content" id="myDropdown">
                 <div class="col-lg-6">
                   <div class="caurseBox">
                     <div class="caurses-info">
@@ -608,7 +614,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -773,13 +778,13 @@
 
             <div class="col-lg-6 formBox" style="background-color: #2f1c81">
               <h4>Enquiry Form</h4>
-              <form class="row g-3">
+              <div name="RegForm" class="row g-3">
                 <div class="col-md-6">
                   <input
                     type="text"
                     class="formInput"
-                    name="fname"
-                    id="firstname"
+                    name="firstName"
+                    id="firstName"
                     placeholder="First Name"
                     required
                   />
@@ -788,8 +793,8 @@
                   <input
                     type="text"
                     class="formInput"
-                    id="lname"
-                    name="lastname"
+                    id="lastName"
+                    name="lastName"
                     placeholder="Last Name"
                     required
                   />
@@ -808,20 +813,19 @@
                   <input
                     type="password"
                     class="formInput"
-                    id="inputPassword"
+                    id="Password"
                     name="password"
                     placeholder="password"
                     required
                   />
                 </div>
                 <div class="col-12">
-                  <input
-                    type="text"
-                    class="formInput"
-                    id="inputAddress"
-                    name="category"
-                    placeholder="Category"
-                  />
+                  <select class="selection" id="category" name="category">
+                    <option value="none" selected disabled hidden>Category</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
                 </div>
                 <div class="col-12">
                   <textarea
@@ -835,13 +839,13 @@
                 <div class="text-center">
                   <button
                     type="submit"
-                    onclick="submit()"
+onclick="formValidation()"
                     class="btn btn-primary btn-lg"
                   >
                     Submit
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -1006,6 +1010,7 @@
     </div>
 
     <script>
+      // drop down in faq section
       const faqs = document.querySelectorAll(".faq");
 
       faqs.forEach((faq) => {
@@ -1013,6 +1018,46 @@
           faq.classList.toggle("active");
         });
       });
+
+    //  form validation
+    function formValidation(){
+var firstName =  document.getElementById("firstName").value;
+var lastName = document.getElementById("lastName").value;
+var Email = document.getElementById("inputEmai").value;
+var password = document.getElementById("Password").value;
+var Category = document.getElementById("category").value;
+var message = document.getElementById("message").value;
+console.log(firstName)
+//Javascript reGex for Email Validation.
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 
+
+if (Email == "" || !regEmail.test(Email)) {
+        alert("Please enter a valid e-mail address.");
+        // Email.focus();
+        // return false;
+    }
+      
+    if (password == "") {
+        alert("Please enter your password");
+        // password.focus();
+        // return false;
+    }
+ 
+    if(password.length <6){
+        alert("Password should be atleast 6 character long");
+        // password.focus();
+        // return false;
+ 
+    }
+
+    if (Category.selectedIndex == -1) {
+        alert("Please enter your course.");
+        // what.focus();
+        // return false;
+
+return true;      }
+
+    }
     </script>
   </body>
 </html>
